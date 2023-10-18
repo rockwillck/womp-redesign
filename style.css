@@ -1,0 +1,234 @@
+body {
+	font-family: 'Montserrat', sans-serif;	font-size: max(12px, 5vmin);
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.landing {
+	width:100%;
+	height:100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXV3YWhyZWQ5YXp1dWNqODgwdG9oaTBveWtmNmdmampiNzB4dTNtMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sRrt5VQ6HzjOZwiH8L/giphy.gif);
+	background-size: cover;
+	background-position: center;
+}
+
+.section {
+	border-top: solid;
+	border-top: solid;
+	text-align: center;
+}
+.section:not(.split) {
+	padding: 20px;
+}
+.split {
+	display: flex;
+	height: 85vh;
+}
+@media (orientation:portrait) {
+	.split {
+		flex-direction: column;
+	}
+	.left {
+		border-bottom: solid;
+	}
+}
+@media (orientation:landscape) {
+	.left {
+		border-right: solid;
+	}
+}
+
+.left {
+	flex: 1;
+	padding: 20px;
+	box-sizing: border-box;
+	font-size: max(12px, 4vmin);
+	text-align: left;
+}
+.right {
+	flex: 1;
+	background-size: cover;
+	background-position: center;
+}
+#goopiest {
+	background-image: url(assets/goopiest.png);
+}
+#pro {
+	background-image: url(assets/pro.png);
+}
+#back {
+	background-image: url(assets/backdrop.png);
+}
+
+.nav {
+	background-color: white;
+	height: 100px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	border-bottom: solid;
+	display: flex;
+	z-index: 2;
+}
+.nav > *:not(:last-child) {
+	border-right: solid;
+}
+.navSection {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	flex: 1;
+}
+.major:not(.logoMajor) {
+	flex: 3;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.logo {
+	height: 80%;
+}
+
+@media (max-width:1000px) {
+	.navSection:not(.major) {
+		display: none;
+	}
+}
+
+h1 {
+	text-transform: uppercase;
+	max-width: 80%;
+	text-align: center;
+	padding: 0px 50px 0px 50px;
+	box-sizing: border-box;
+	color: white;
+	text-shadow: 5px 5px 0 black;
+}
+
+@media (orientation:landscape) {
+	.left > p {
+		margin-bottom: 100px;
+	}
+}
+@media (orientation:portrait) {
+	.left > a {
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+}
+
+.cta {
+	color:black
+}
+@media (min-width:700px) {
+	.cta {
+		background-color: black;
+		color: white;
+		padding: 15px 50px 15px 50px;
+		border-radius: 100vmin;
+		text-decoration: none;
+		text-transform: uppercase;
+		border: solid;
+		border-color: black;
+		transition: 0.2s;
+		text-align: center;
+		font-size: max(12px, 3vmin);
+	}
+	.cta:hover {
+		background-color: white;
+		color: black;
+	}
+}
+
+a:not(.cta) {
+	color: black;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.2s;
+}
+a:not(.cta):hover {
+	background-color: black;
+	color: white;
+}
+
+footer {
+	position:fixed;
+	bottom:10px;
+	left: 10px;
+	background-color: white;
+	font-size: 12px;
+}
+
+.one, .box {
+	font-size: 20px;
+	flex: 1;
+}
+.one > img {
+	height: 100px;
+	width: 100px;
+}
+.one {
+	padding: 20px;
+	box-sizing: border-box;
+}
+.threes {
+	display: flex;
+	height: 100%;
+}
+@media (orientation: portrait) {
+	.threes {
+		flex-direction: column;
+	}
+}
+
+.bento, .projects {
+	display: flex;
+	flex-wrap: wrap;
+}
+.bento > .box {
+	padding: 30px;
+	box-sizing: border-box;
+}
+.projects > .box {
+	height: min-content;
+}
+.box {
+	flex: 1;
+	min-width: 300px;
+	border: solid;
+	margin: 10px;
+	border-radius: 20px;
+	flex-direction: column;
+	text-decoration: none;
+	overflow: auto;
+}
+.bento > .box > img {
+	height: 100px;
+}
+
+.projects > .box > img {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+.projects > .box > p {
+	margin: 0;
+	background-color: black;
+	color: white;
+	text-align: left;
+	font-size: 12px;
+	padding: 10px;
+}
