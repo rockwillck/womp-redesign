@@ -69,7 +69,7 @@ body {
 
 .nav {
 	background-color: white;
-	height: 100px;
+	height: 80px;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -77,9 +77,11 @@ body {
 	border-bottom: solid;
 	display: flex;
 	z-index: 2;
+	border-width: 1px;
 }
 .nav > *:not(:last-child) {
 	border-right: solid;
+	border-width: 1px;
 }
 .navSection {
 	height: 100%;
@@ -129,11 +131,11 @@ h1 {
 .cta {
 	color:black
 }
-@media (min-width:700px) {
+/* @media (min-width:700px) { */
 	.cta {
 		background-color: black;
 		color: white;
-		padding: 15px 50px 15px 50px;
+		padding: 1vmin 3vmin 1vmin 3vmin;
 		border-radius: 100vmin;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -147,7 +149,7 @@ h1 {
 		background-color: white;
 		color: black;
 	}
-}
+/* }/ */
 
 a:not(.cta) {
 	color: black;
@@ -161,6 +163,11 @@ a:not(.cta) {
 a:not(.cta):hover {
 	background-color: black;
 	color: white;
+}
+
+.section > a {
+	display: inline;
+	font-size: 15px;
 }
 
 footer {
